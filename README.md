@@ -3,14 +3,19 @@ A Mobile Application for detecting Potholes with other capabilities soon to come
 
 # To clone repository to Desktop
 cd ~/Desktop
+
 mkdir PotholeApp && cd PotholeApp
+
 git clone git@github.com:[username]/Pothole-Detection.git
+
 
 This clones using your git SSH Key
 If you need help creating this key, refer to it here https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 cd Pothole-Detection
+
 ...
+
 And you should be in!
 "ls" to make sure the files are there and also "git status" to make sure you are on main"
 

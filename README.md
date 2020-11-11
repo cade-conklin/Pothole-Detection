@@ -31,26 +31,38 @@ BEFORE YOU START ADDING CODE
 
 To make a new branch:
 
+
 git branch [name-of-branch]
+
 git checkout [name-of-branch]
+
 
 To set remote tracking branch of new branch:
 
+
 git --set-upstream origin [name-of-branch]
+
 
 To check if there any updates to the main branch:
 
+
 git pull origin main
+
 
 AFTER YOU ADD CODE
 We want to commit code frequently so we can see each others changes.
 
 To commit code:
 
+
 git status
+
 git add .
+
 git commit -m "[SPECIFIC COMMIT MESSAGE]"
+
 git push
+
 
 OPENING A PULL REQUEST
 After you have made your first commit from a branch, a pull request can be opened.  Open this only when you think your branch is almost ready to be merged.

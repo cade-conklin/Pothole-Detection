@@ -50,6 +50,7 @@ git pull origin main
 
 
 AFTER YOU ADD CODE
+
 We want to commit code frequently so we can see each others changes.
 
 To commit code:
@@ -65,5 +66,6 @@ git push
 
 
 OPENING A PULL REQUEST
+
 After you have made your first commit from a branch, a pull request can be opened.  Open this only when you think your branch is almost ready to be merged.
 DO NOT merge a pull request on your own.  Ask for someone else to review the code and merge it themselves.  This will allow us to keep each other accountable.

@@ -1,8 +1,8 @@
 //
 //  Pothole_DetectionTests.swift
-//  Pothole DetectionTests
+//  Pothole-DetectionTests
 //
-//  Created by Cade Conklin on 11/10/20.
+//  Created by Cade Conklin on 11/16/20.
 //
 
 import XCTest

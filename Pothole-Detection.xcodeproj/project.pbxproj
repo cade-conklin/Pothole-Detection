@@ -16,6 +16,7 @@
 		1D8586B525635D5100667F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8586B325635D5100667F3C /* LaunchScreen.storyboard */; };
 		1D8586C025635D5100667F3C /* Pothole_DetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8586BF25635D5100667F3C /* Pothole_DetectionTests.swift */; };
 		1D8586CB25635D5100667F3C /* Pothole_DetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8586CA25635D5100667F3C /* Pothole_DetectionUITests.swift */; };
+		6E0947752564E3A900BCCA50 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0947742564E3A900BCCA50 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1D8586C625635D5100667F3C /* Pothole-DetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pothole-DetectionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8586CA25635D5100667F3C /* Pothole_DetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pothole_DetectionUITests.swift; sourceTree = "<group>"; };
 		1D8586CC25635D5100667F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E0947742564E3A900BCCA50 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				1D8586A525635D4F00667F3C /* AppDelegate.swift */,
 				1D8586A725635D4F00667F3C /* SceneDelegate.swift */,
 				1D8586A925635D4F00667F3C /* ViewController.swift */,
+				6E0947742564E3A900BCCA50 /* MapViewController.swift */,
 				1D8586AB25635D4F00667F3C /* Main.storyboard */,
 				1D8586B125635D5100667F3C /* Assets.xcassets */,
 				1D8586B325635D5100667F3C /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				1D8586AA25635D4F00667F3C /* ViewController.swift in Sources */,
 				1D8586A625635D4F00667F3C /* AppDelegate.swift in Sources */,
 				1D8586A825635D4F00667F3C /* SceneDelegate.swift in Sources */,
+				6E0947752564E3A900BCCA50 /* MapViewController.swift in Sources */,
 				1D8586B025635D4F00667F3C /* Pothole_Detection.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

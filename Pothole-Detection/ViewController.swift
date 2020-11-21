@@ -16,10 +16,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var yAccel: UILabel!
     @IBOutlet weak var zAccel: UILabel!
    
-    @IBAction func toMapButtonPressed(_ sender: Any) {
-        print("Go to map button pressed")
-        self.performSegue(withIdentifier: "toMapSegue", sender: self)
-    }
     
     var motion = CMMotionManager()
         

@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
+//class LocationManager: CLLocationManager {
+    
+//}
+
 class MapViewController: UIViewController {
 
-
-    @IBAction func closeButtonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "closeMapSegue", sender: self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

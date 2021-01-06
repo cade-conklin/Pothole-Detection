@@ -24,10 +24,6 @@ class ViewController: UIViewController {
         print(self.y_arr)
         print(self.z_arr)
     }
-    @IBAction func toMapButtonPressed(_ sender: Any) {
-        print("Go to map button pressed")
-        self.performSegue(withIdentifier: "toMapSegue", sender: self)
-    }
     
     var motion = CMMotionManager()
         

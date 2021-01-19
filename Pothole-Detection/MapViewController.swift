@@ -42,6 +42,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.distanceFilter = kCLDistanceFilterNone //Location will constantly update
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
+        
+        //set the map view coordinates
+        guard let coordinate = locationManager.location?.coordinate else {return}
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: 400, longitudinalMeters: 400)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+        mapView.showsUserLocation = true
+        
+
         myAccelerometer()
         
 

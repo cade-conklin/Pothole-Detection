@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="40F-TM-zl4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="40F-TM-zl4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,76 +17,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWL-oG-lZb">
-                                <rect key="frame" x="111" y="215" width="192" height="41"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="GfL-1O-QOE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QL-FY-Ftl">
-                                <rect key="frame" x="111" y="545" width="192" height="45"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="rom-LZ-eRS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyp-jS-l0B">
-                                <rect key="frame" x="111" y="379" width="192" height="41"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="ujS-1M-eSp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-VI-tWC">
-                                <rect key="frame" x="170" y="620" width="74" height="30"/>
-                                <state key="normal" title="Go To Map"/>
-                                <connections>
-                                    <segue destination="gZc-Ud-olf" kind="show" id="I9C-wk-plb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xta-kb-hqo">
-                                <rect key="frame" x="140" y="668" width="135.00000000000011" height="48.999999999999943"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Pothole Hit">
+                                <rect key="frame" x="120.5" y="428" width="173" height="94"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="rgv-57-4B8"/>
+                                    <constraint firstAttribute="height" constant="94" id="zAP-Rd-UWD"/>
+                                </constraints>
+                                <state key="normal" title="Start Driving">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="PotholeHit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szh-aW-r4x"/>
+                                    <segue destination="gZc-Ud-olf" kind="show" id="I9C-wk-plb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F2B-nW-4V1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4QL-FY-Ftl" secondAttribute="bottom" constant="272" id="I0u-8T-JR0"/>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="centerX" secondItem="cyp-jS-l0B" secondAttribute="centerX" id="Kvj-BG-6HB"/>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="centerX" secondItem="4QL-FY-Ftl" secondAttribute="centerX" id="NPy-e7-7Ve"/>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="leading" secondItem="cyp-jS-l0B" secondAttribute="leading" id="Qda-9N-Ei7"/>
-                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="top" secondItem="4QL-FY-Ftl" secondAttribute="bottom" constant="30" id="QwI-8h-VwL"/>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="trailing" secondItem="4QL-FY-Ftl" secondAttribute="trailing" id="cXc-7x-jBZ"/>
-                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerX" secondItem="4QL-FY-Ftl" secondAttribute="centerX" id="e4E-4Y-Kvo"/>
-                            <constraint firstItem="cyp-jS-l0B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="349" id="osq-Gf-GVY"/>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="qMK-F9-VK2"/>
-                            <constraint firstItem="EWL-oG-lZb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="r1h-ZY-Icc"/>
+                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="saq-Ye-jq9"/>
+                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vXh-Gg-b6F"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Oa-Oo-aCw"/>
                     <connections>
-                        <outlet property="xAccel" destination="EWL-oG-lZb" id="1QA-QP-fm0"/>
-                        <outlet property="yAccel" destination="cyp-jS-l0B" id="HbF-yh-HZa"/>
-                        <outlet property="zAccel" destination="4QL-FY-Ftl" id="S5q-Pl-WXm"/>
+                        <outlet property="StartButton" destination="Hvu-VI-tWC" id="OS2-42-6Td"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,6 +51,7 @@
         <!--Map View Controller-->
         <scene sceneID="Y9p-Rd-aIg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGw-Ov-5RP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MapViewController" id="gZc-Ud-olf" customClass="MapViewController" customModule="Pothole_Detection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wJ-PT-qTs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -115,12 +71,10 @@
                             <constraint firstItem="gz9-bG-2tW" firstAttribute="leading" secondItem="MSe-Mt-oEg" secondAttribute="leading" id="wCN-Lb-Yoz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sVf-C9-Fk9"/>
                     <connections>
                         <outlet property="mapView" destination="gz9-bG-2tW" id="xgE-gc-Kih"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EGw-Ov-5RP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2673.913043478261" y="8.7053571428571423"/>
         </scene>
@@ -147,11 +101,11 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

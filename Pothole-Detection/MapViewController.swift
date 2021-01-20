@@ -20,6 +20,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager:CLLocationManager = CLLocationManager()
+    let userNotificationCenter = UNUserNotificationCenter.current()
+
     var x_arr = Array<Double>(repeating: 0, count: 20)
     var y_arr = Array<Double>(repeating: 0, count: 20)
     var z_arr = Array<Double>(repeating: 0, count: 20)
@@ -32,6 +34,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("map loaded")
+        self.requestNotificationAuthorization()
+        self.sendNotification()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -73,9 +77,47 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: newLocation.coordinate, latitudinalMeters: radius, longitudinalMeters: radius)
         mapView.setRegion(region, animated: true)
         
-        
-        
+    }
+    
+    func requestNotificationAuthorization() {
+        // Code here
+        let authOptions = UNAuthorizationOptions.init(arrayLiteral: .alert, .badge, .sound)
+        self.userNotificationCenter.requestAuthorization(options: authOptions) { (success, error) in
+                if let error = error {
+                    print("Error: ", error)
+                }
+        }
+    }
 
+    func sendNotification() {
+        // Code here
+        let notificationContent = UNMutableNotificationContent()
+
+        // Add the content to the notification content
+        notificationContent.title = "POTHOLE"
+        notificationContent.body = "Detected a pothole"
+        notificationContent.badge = NSNumber(value: 3)
+
+        // Add an attachment to the notification content
+        if let url = Bundle.main.url(forResource: "AppIcon",
+                                        withExtension: "png") {
+            if let attachment = try? UNNotificationAttachment(identifier: "AppIcon",
+                                                                url: url,
+                                                                options: nil) {
+                notificationContent.attachments = [attachment]
+            }
+        }
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5,
+                                                            repeats: false)
+            let request = UNNotificationRequest(identifier: "testNotification",
+                                                content: notificationContent,
+                                                trigger: trigger)
+            
+            userNotificationCenter.add(request) { (error) in
+                if let error = error {
+                    print("Notification Error: ", error)
+                }
+            }
     }
     
         
@@ -99,11 +141,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     self.z_arr.append(z)
                     
                     if (abs(self.x_arr[self.x_arr.count - 1] - self.x_arr[self.x_arr.count - 2]) > abs(0.5)) && self.x_arr.count > 1{
-                        print("Pothole detected")
-
+                        print("Pothole Detected")
+                        self.sendNotification()
                     }
                     if (abs(self.y_arr[self.y_arr.count - 1] - self.y_arr[self.y_arr.count - 2]) > abs(0.5)) && self.y_arr.count > 1{
-                        print("Pothole detected")
+                        print("Pothole Detected")
+                        self.sendNotification()
 
                     }
                 }

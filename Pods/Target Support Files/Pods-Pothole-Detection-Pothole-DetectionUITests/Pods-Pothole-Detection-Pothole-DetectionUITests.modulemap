@@ -1,0 +1,6 @@
+framework module Pods_Pothole_Detection_Pothole_DetectionUITests {
+  umbrella header "Pods-Pothole-Detection-Pothole-DetectionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

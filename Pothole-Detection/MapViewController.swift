@@ -4,7 +4,7 @@
 //
 //  Created by Odyssey Wilson on 11/17/20.
 //
-
+import FirebaseDatabase
 import Foundation
 import UIKit
 import MapKit
@@ -18,6 +18,8 @@ import CoreMotion
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
+    
+    private let database = Database.database().reference()
     
     let locationManager:CLLocationManager = CLLocationManager()
     let userNotificationCenter = UNUserNotificationCenter.current()
@@ -124,6 +126,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
         func myAccelerometer() {
             print("Start Accelerometer")
+//            let object: [String: Any] = [
+//                "name": "Test" as NSObject,
+//                "Test2" : "Test3"
+//            ]
+//            database.child("TestChild").setValue(object)
             motion.accelerometerUpdateInterval = 0.5
             motion.startAccelerometerUpdates(to: OperationQueue.current!) {
                 (data, error) in

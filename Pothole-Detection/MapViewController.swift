@@ -26,10 +26,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     var motion = CMMotionManager()
     var onMapView = false;
+    
+    var changeAcc = 0.5
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(carType)
+    
+        if carType == "Sedan" {
+            changeAcc = 0.5
+        }
+        else if carType == "SUV" {
+            changeAcc = 0.45
+        }
+        else if carType == "Truck" {
+            changeAcc = 0.4
+        }
+        else {
+            changeAcc = 0.5
+        }
         print("map loaded")
         self.requestNotificationAuthorization()
         self.sendNotification(lon: 0.0, lat: 0.0)
@@ -157,13 +173,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     //Convert location to CLLocationCoordinate2D so pin function can use it
                     let pinLocation = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
                     
-                    if (abs(self.x_arr[self.x_arr.count - 1] - self.x_arr[self.x_arr.count - 2]) > abs(0.5)) && self.x_arr.count > 1{
+                    if (abs(self.x_arr[self.x_arr.count - 1] - self.x_arr[self.x_arr.count - 2]) > abs(self.changeAcc)) && self.x_arr.count > 10{
                         print("Pothole Detected because ", self.x_arr[self.x_arr.count - 1], " - ", self.x_arr[self.x_arr.count - 2] )
                         self.sendNotification(lon: Float(coordinate.longitude), lat: Float(coordinate.latitude))
                         self.putPinOnMap(location: pinLocation)
                     }
                     
-                    if (abs(self.y_arr[self.y_arr.count - 1] - self.y_arr[self.y_arr.count - 2]) > abs(0.5)) && self.y_arr.count > 1{
+                    if (abs(self.y_arr[self.y_arr.count - 1] - self.y_arr[self.y_arr.count - 2]) > abs(self.changeAcc)) && self.y_arr.count > 10{
                         print("Pothole Detected")
                         self.sendNotification(lon: Float(coordinate.longitude), lat: Float(coordinate.latitude))
                         self.putPinOnMap(location: pinLocation)
@@ -175,6 +191,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
     func stopMyAccelerometer() {
         motion.stopAccelerometerUpdates()
+        x_arr.removeAll()
+        y_arr.removeAll()
+        z_arr.removeAll()
     }
 
     

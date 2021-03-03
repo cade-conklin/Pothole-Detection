@@ -1,14 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="40F-TM-zl4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="40F-TM-zl4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--SettingsViewController-->
+        <scene sceneID="GlT-qJ-RVg">
+            <objects>
+                <viewController title="SettingsViewController" id="iM8-p0-M7M" customClass="SettingsViewController" customModule="Pothole_Detection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Htz-Nm-fpI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-Ac-j0V">
+                                <rect key="frame" x="102" y="240" width="210" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="fG7-MZ-YlJ"/>
+                                    <constraint firstAttribute="width" constant="210" id="kTg-GA-cl5"/>
+                                </constraints>
+                                <state key="normal" title="Sedan">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="SedanButtonEvent:" destination="iM8-p0-M7M" eventType="touchUpInside" id="RxG-0R-HwQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1St-kg-GTY">
+                                <rect key="frame" x="102" y="381" width="210" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="6M3-JV-yPJ"/>
+                                    <constraint firstAttribute="width" constant="210" id="yIJ-er-Qhq"/>
+                                </constraints>
+                                <state key="normal" title="SUV">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="SUVButtonEvent:" destination="iM8-p0-M7M" eventType="touchUpInside" id="zmm-e7-rZ7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmu-4R-a7y">
+                                <rect key="frame" x="102" y="524" width="210" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="16x-ll-57Q"/>
+                                    <constraint firstAttribute="width" constant="210" id="fGT-ri-hWF"/>
+                                </constraints>
+                                <state key="normal" title="Truck">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="TruckButtonEvent:" destination="iM8-p0-M7M" eventType="touchUpInside" id="Jiy-8S-gRT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IOx-wR-0cJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1St-kg-GTY" firstAttribute="top" secondItem="o7h-Ac-j0V" secondAttribute="bottom" constant="75" id="6wU-Qb-hpU"/>
+                            <constraint firstItem="o7h-Ac-j0V" firstAttribute="centerX" secondItem="IOx-wR-0cJ" secondAttribute="centerX" id="8Tn-Xb-K8l"/>
+                            <constraint firstItem="gmu-4R-a7y" firstAttribute="top" secondItem="1St-kg-GTY" secondAttribute="bottom" constant="77" id="EV3-mc-4vV"/>
+                            <constraint firstItem="gmu-4R-a7y" firstAttribute="centerX" secondItem="IOx-wR-0cJ" secondAttribute="centerX" id="NMD-qn-bji"/>
+                            <constraint firstItem="o7h-Ac-j0V" firstAttribute="top" secondItem="IOx-wR-0cJ" secondAttribute="top" constant="152" id="Qxs-sL-y3r"/>
+                            <constraint firstItem="1St-kg-GTY" firstAttribute="centerX" secondItem="IOx-wR-0cJ" secondAttribute="centerX" id="qus-iX-hfK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hCK-8e-PL2"/>
+                    <connections>
+                        <outlet property="SUVButton" destination="1St-kg-GTY" id="cnj-fR-5uW"/>
+                        <outlet property="SedanButton" destination="o7h-Ac-j0V" id="wLC-gI-IvW"/>
+                        <outlet property="TruckButton" destination="gmu-4R-a7y" id="o0P-5t-9w8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jdn-Ga-fl9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.8840579710147" y="-588.61607142857144"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,11 +88,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-VI-tWC">
-                                <rect key="frame" x="120.5" y="428" width="173" height="94"/>
+                                <rect key="frame" x="20" y="810" width="374" height="59"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="rgv-57-4B8"/>
-                                    <constraint firstAttribute="height" constant="94" id="zAP-Rd-UWD"/>
+                                    <constraint firstAttribute="width" constant="374" id="C6g-8Q-6AW"/>
+                                    <constraint firstAttribute="height" constant="59" id="cG4-Pd-ljg"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal">
@@ -42,15 +112,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="gZc-Ud-olf" kind="show" id="I9C-wk-plb"/>
+                                    <segue destination="gZc-Ud-olf" kind="show" identifier="" id="I9C-wk-plb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaP-gl-ZnZ">
+                                <rect key="frame" x="18" y="102" width="31" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="KCb-rn-VVK"/>
+                                    <constraint firstAttribute="width" constant="31" id="kXF-S5-DKa"/>
+                                </constraints>
+                                <state key="normal" image="car.2" catalog="system"/>
+                                <connections>
+                                    <segue destination="iM8-p0-M7M" kind="push" id="vM1-x7-yf0"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="saq-Ye-jq9"/>
-                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vXh-Gg-b6F"/>
+                            <constraint firstItem="OaP-gl-ZnZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="Gf4-bX-3m3"/>
+                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W0G-xe-qNL"/>
+                            <constraint firstItem="OaP-gl-ZnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="fQt-Gk-2hT"/>
+                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="7" id="vD3-dK-q9A"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Oa-Oo-aCw"/>
@@ -65,7 +149,6 @@
         <!--Map View Controller-->
         <scene sceneID="Y9p-Rd-aIg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EGw-Ov-5RP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MapViewController" id="gZc-Ud-olf" customClass="MapViewController" customModule="Pothole_Detection" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wJ-PT-qTs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -85,10 +168,12 @@
                             <constraint firstItem="gz9-bG-2tW" firstAttribute="leading" secondItem="MSe-Mt-oEg" secondAttribute="leading" id="wCN-Lb-Yoz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zHU-7D-13f"/>
                     <connections>
                         <outlet property="mapView" destination="gz9-bG-2tW" id="xgE-gc-Kih"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGw-Ov-5RP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2673.913043478261" y="8.7053571428571423"/>
         </scene>
@@ -112,11 +197,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car.2" catalog="system" width="128" height="72"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

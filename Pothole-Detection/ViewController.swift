@@ -8,17 +8,19 @@
 import UIKit
 import CoreMotion
 
+public var carType = ""
+
 class ViewController: UIViewController {
 
     
     @IBOutlet weak var StartButton: UIButton!
+    var car = Car(type: "Sedan")
     
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            StartButton.center = self.view.center
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        StartButton.center = self.view.center
+    }
 
        
 

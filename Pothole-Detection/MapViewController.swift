@@ -137,6 +137,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 //            ]
 //            database.child("Potholes/Pothole_" + String(Int.random(in: 0..<10000))).setValue(object)
 
+            self.database.child("Potholes").observeSingleEvent(of: .value, with: { (snapshot) in
+                for child in snapshot.children {
+                    if let snapshot = child as? DataSnapshot,
+                       let pothole = snapshot.value as? NSDictionary {
+                        let longitude = pothole["longitude"] as? Double
+                        let latitude = pothole["latitude"] as? Double
+                        let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                        self.putPinOnMap(location: pinlocation, potholeNum: "test")
+                        print("pothole: ", pothole)
+                    }
+                }
+            })
             
             motion.accelerometerUpdateInterval = 0.5
             motion.startAccelerometerUpdates(to: OperationQueue.current!) {

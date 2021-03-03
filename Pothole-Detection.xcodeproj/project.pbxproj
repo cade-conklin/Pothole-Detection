@@ -22,7 +22,7 @@
 		5133F062661E5FDE745C38AF /* Pods_Pothole_Detection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387096ECF9F482537C6C447A /* Pods_Pothole_Detection.framework */; };
 		6E0947752564E3A900BCCA50 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0947742564E3A900BCCA50 /* MapViewController.swift */; };
 		B6A66AACA45C1F3998FB17CD /* Pods_Pothole_DetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE419BD35FB5FF86DF2E838F /* Pods_Pothole_DetectionTests.framework */; };
-		CEAEBE7625C2449300E9A4DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEAEBE7525C2449300E9A4DB /* GoogleService-Info.plist */; };
+		CE52177D25D86551002C4EEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE52177C25D86551002C4EEA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		A05398DF51E54BD3FFC4F161 /* Pods-Pothole-Detection.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pothole-Detection.release.xcconfig"; path = "Target Support Files/Pods-Pothole-Detection/Pods-Pothole-Detection.release.xcconfig"; sourceTree = "<group>"; };
 		A3867C1B888A42F67FA724B8 /* Pods-Pothole-Detection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pothole-Detection.debug.xcconfig"; path = "Target Support Files/Pods-Pothole-Detection/Pods-Pothole-Detection.debug.xcconfig"; sourceTree = "<group>"; };
 		B4832F474E9E18436A7BE585 /* Pods-Pothole-DetectionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pothole-DetectionTests.debug.xcconfig"; path = "Target Support Files/Pods-Pothole-DetectionTests/Pods-Pothole-DetectionTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CEAEBE7525C2449300E9A4DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE52177C25D86551002C4EEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFCEC7E030E530A91F972C9D /* Pods_Pothole_Detection_Pothole_DetectionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pothole_Detection_Pothole_DetectionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9545623A477530674908C5D /* Pods-Pothole-Detection-Pothole-DetectionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pothole-Detection-Pothole-DetectionUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pothole-Detection-Pothole-DetectionUITests/Pods-Pothole-Detection-Pothole-DetectionUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE419BD35FB5FF86DF2E838F /* Pods_Pothole_DetectionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pothole_DetectionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,7 +126,7 @@
 		1D8586A425635D4F00667F3C /* Pothole-Detection */ = {
 			isa = PBXGroup;
 			children = (
-				CEAEBE7525C2449300E9A4DB /* GoogleService-Info.plist */,
+				CE52177C25D86551002C4EEA /* GoogleService-Info.plist */,
 				1D8586A525635D4F00667F3C /* AppDelegate.swift */,
 				1D8586A725635D4F00667F3C /* SceneDelegate.swift */,
 				1D8586A925635D4F00667F3C /* ViewController.swift */,
@@ -292,8 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8586B525635D5100667F3C /* LaunchScreen.storyboard in Resources */,
-				CEAEBE7625C2449300E9A4DB /* GoogleService-Info.plist in Resources */,
 				1D8586B225635D5100667F3C /* Assets.xcassets in Resources */,
+				CE52177D25D86551002C4EEA /* GoogleService-Info.plist in Resources */,
 				1D8586AD25635D4F00667F3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

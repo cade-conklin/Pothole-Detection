@@ -17,39 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-Ac-j0V">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7h-Ac-j0V">
                                 <rect key="frame" x="102" y="240" width="210" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="fG7-MZ-YlJ"/>
                                     <constraint firstAttribute="width" constant="210" id="kTg-GA-cl5"/>
                                 </constraints>
-                                <state key="normal" title="Sedan">
+                                <state key="normal" title="Sedan" image="Sedan">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="SedanButtonEvent:" destination="iM8-p0-M7M" eventType="touchUpInside" id="RxG-0R-HwQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1St-kg-GTY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1St-kg-GTY">
                                 <rect key="frame" x="102" y="381" width="210" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="6M3-JV-yPJ"/>
                                     <constraint firstAttribute="width" constant="210" id="yIJ-er-Qhq"/>
                                 </constraints>
-                                <state key="normal" title="SUV">
+                                <state key="normal" title="SUV" image="SUV">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="SUVButtonEvent:" destination="iM8-p0-M7M" eventType="touchUpInside" id="zmm-e7-rZ7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmu-4R-a7y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmu-4R-a7y">
                                 <rect key="frame" x="102" y="524" width="210" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="16x-ll-57Q"/>
                                     <constraint firstAttribute="width" constant="210" id="fGT-ri-hWF"/>
                                 </constraints>
-                                <state key="normal" title="Truck">
+                                <state key="normal" title="Truck" image="Truck">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -88,40 +88,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hvu-VI-tWC">
-                                <rect key="frame" x="20" y="810" width="374" height="59"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <rect key="frame" x="288" y="705" width="63" height="63"/>
+                                <color key="backgroundColor" red="0.42436474559999998" green="0.70227611059999995" blue="0.95692414049999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="C6g-8Q-6AW"/>
-                                    <constraint firstAttribute="height" constant="59" id="cG4-Pd-ljg"/>
+                                    <constraint firstAttribute="height" constant="63" id="UYN-Id-Hiq"/>
+                                    <constraint firstAttribute="width" constant="63" id="cYp-9T-4Cf"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Start Driving">
+                                        <fragment content="Map">
                                             <attributes>
                                                 <color key="NSColor" systemColor="labelColor"/>
-                                                <font key="NSFont" size="24" name="Herculanum"/>
+                                                <font key="NSFont" size="11" name="Rockwell-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="gZc-Ud-olf" kind="show" identifier="" id="I9C-wk-plb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaP-gl-ZnZ">
-                                <rect key="frame" x="18" y="102" width="31" height="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wheel" translatesAutoresizingMaskIntoConstraints="NO" id="qpc-6o-Ozv">
+                                <rect key="frame" x="87" y="410.5" width="240" height="129"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="KCb-rn-VVK"/>
-                                    <constraint firstAttribute="width" constant="31" id="kXF-S5-DKa"/>
+                                    <constraint firstAttribute="width" constant="240" id="BOs-37-1nQ"/>
+                                    <constraint firstAttribute="height" constant="129" id="d4k-6I-22a"/>
                                 </constraints>
-                                <state key="normal" image="car.2" catalog="system"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="du7-Nt-GAF">
+                                <rect key="frame" x="87" y="557" width="240" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="dQ6-AX-Ix4"/>
+                                    <constraint firstAttribute="width" constant="240" id="nah-2X-sMJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaP-gl-ZnZ">
+                                <rect key="frame" x="63" y="705" width="63" height="63"/>
+                                <color key="backgroundColor" red="0.42436474559999998" green="0.70227611059999995" blue="0.95692414049999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="ZHH-4q-JSL"/>
+                                    <constraint firstAttribute="width" constant="63" id="tSf-om-VK1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="9"/>
+                                <state key="normal" title="Car Type">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="iM8-p0-M7M" kind="push" id="vM1-x7-yf0"/>
                                 </connections>
@@ -131,15 +144,21 @@
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="OaP-gl-ZnZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="14" id="Gf4-bX-3m3"/>
-                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="W0G-xe-qNL"/>
-                            <constraint firstItem="OaP-gl-ZnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="fQt-Gk-2hT"/>
-                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="7" id="vD3-dK-q9A"/>
+                            <constraint firstItem="OaP-gl-ZnZ" firstAttribute="centerY" secondItem="Hvu-VI-tWC" secondAttribute="centerY" id="Ekz-FC-0AP"/>
+                            <constraint firstItem="du7-Nt-GAF" firstAttribute="top" secondItem="qpc-6o-Ozv" secondAttribute="bottom" constant="17.5" id="S3L-XQ-HUJ"/>
+                            <constraint firstItem="qpc-6o-Ozv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Sag-L8-608"/>
+                            <constraint firstItem="qpc-6o-Ozv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Skm-tf-RCa"/>
+                            <constraint firstItem="du7-Nt-GAF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Umm-sk-NEH"/>
+                            <constraint firstItem="Hvu-VI-tWC" firstAttribute="top" secondItem="du7-Nt-GAF" secondAttribute="bottom" constant="82" id="XDj-bt-BDs"/>
+                            <constraint firstItem="OaP-gl-ZnZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="ceJ-JE-ctl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hvu-VI-tWC" secondAttribute="trailing" constant="63" id="eNy-Dz-crn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Oa-Oo-aCw"/>
                     <connections>
+                        <outlet property="SelectCarButton" destination="OaP-gl-ZnZ" id="YaX-eu-Ckf"/>
                         <outlet property="StartButton" destination="Hvu-VI-tWC" id="OS2-42-6Td"/>
+                        <outlet property="Wheel" destination="qpc-6o-Ozv" id="Odc-gr-en6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -157,19 +176,71 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-bG-2tW">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XS-1b-JUT">
+                                <rect key="frame" x="160.5" y="694" width="93" height="93"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="POz-CQ-oZA"/>
+                                    <constraint firstAttribute="height" constant="93" id="h22-Z1-f2m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="13"/>
+                                <state key="normal" title="Start Drive">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartDrivingButtonEvent:" destination="gZc-Ud-olf" eventType="touchUpInside" id="i5f-sb-BMq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ko8-Qh-7ab">
+                                <rect key="frame" x="317" y="767" width="63" height="63"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="ggo-w6-DYy"/>
+                                    <constraint firstAttribute="width" constant="63" id="mYe-6M-UxC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="11"/>
+                                <state key="normal" title="Stop Drive">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StopDrivingButtonEvent:" destination="gZc-Ud-olf" eventType="touchUpInside" id="jC1-jU-rVI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIC-rQ-zPG">
+                                <rect key="frame" x="49" y="767" width="63" height="63"/>
+                                <color key="backgroundColor" red="0.42436474559999998" green="0.70227611059999995" blue="0.95692414049999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Yd6-IR-NWS"/>
+                                    <constraint firstAttribute="width" constant="63" id="aIr-ws-y5j"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="location" catalog="system"/>
+                                <connections>
+                                    <action selector="TrackLocationButtonEvent:" destination="gZc-Ud-olf" eventType="touchUpInside" id="56d-tK-3wf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MSe-Mt-oEg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pIC-rQ-zPG" firstAttribute="centerY" secondItem="ko8-Qh-7ab" secondAttribute="centerY" id="B21-1N-TKZ"/>
                             <constraint firstItem="gz9-bG-2tW" firstAttribute="bottom" secondItem="MSe-Mt-oEg" secondAttribute="bottom" id="Fe6-Lj-EkX"/>
                             <constraint firstItem="gz9-bG-2tW" firstAttribute="top" secondItem="MSe-Mt-oEg" secondAttribute="top" id="ORh-n8-mmW"/>
+                            <constraint firstItem="ko8-Qh-7ab" firstAttribute="leading" secondItem="gz9-bG-2tW" secondAttribute="trailing" constant="-87" id="RPM-Bx-LvT"/>
+                            <constraint firstItem="MSe-Mt-oEg" firstAttribute="bottom" secondItem="8XS-1b-JUT" secondAttribute="bottom" constant="75" id="RpW-Jf-qj7"/>
+                            <constraint firstItem="8XS-1b-JUT" firstAttribute="centerX" secondItem="gz9-bG-2tW" secondAttribute="centerX" id="TnN-GS-oDJ"/>
+                            <constraint firstItem="MSe-Mt-oEg" firstAttribute="bottom" secondItem="ko8-Qh-7ab" secondAttribute="bottom" constant="32" id="e4o-1z-KGt"/>
                             <constraint firstItem="MSe-Mt-oEg" firstAttribute="trailing" secondItem="gz9-bG-2tW" secondAttribute="trailing" id="kUY-lw-f10"/>
                             <constraint firstItem="MSe-Mt-oEg" firstAttribute="bottom" secondItem="gz9-bG-2tW" secondAttribute="bottom" id="ll4-g0-UFl"/>
                             <constraint firstItem="gz9-bG-2tW" firstAttribute="leading" secondItem="MSe-Mt-oEg" secondAttribute="leading" id="wCN-Lb-Yoz"/>
+                            <constraint firstItem="gz9-bG-2tW" firstAttribute="leading" secondItem="pIC-rQ-zPG" secondAttribute="trailing" constant="-112" id="yyF-JD-NTi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zHU-7D-13f"/>
                     <connections>
+                        <outlet property="StartDrivingButton" destination="8XS-1b-JUT" id="dsR-ew-z5B"/>
+                        <outlet property="StopDrivingButton" destination="ko8-Qh-7ab" id="vh4-YH-m71"/>
+                        <outlet property="TrackLocationButton" destination="pIC-rQ-zPG" id="9Wv-gQ-P6c"/>
                         <outlet property="mapView" destination="gz9-bG-2tW" id="xgE-gc-Kih"/>
                     </connections>
                 </viewController>
@@ -197,7 +268,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="car.2" catalog="system" width="128" height="72"/>
+        <image name="Logo" width="150" height="16"/>
+        <image name="SUV" width="150" height="69"/>
+        <image name="Sedan" width="150" height="62.5"/>
+        <image name="Truck" width="150" height="87.5"/>
+        <image name="Wheel" width="150" height="150"/>
+        <image name="location" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -212,6 +288,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

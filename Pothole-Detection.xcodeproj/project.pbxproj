@@ -17,6 +17,8 @@
 		1D8586B525635D5100667F3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8586B325635D5100667F3C /* LaunchScreen.storyboard */; };
 		1D8586C025635D5100667F3C /* Pothole_DetectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8586BF25635D5100667F3C /* Pothole_DetectionTests.swift */; };
 		1D8586CB25635D5100667F3C /* Pothole_DetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8586CA25635D5100667F3C /* Pothole_DetectionUITests.swift */; };
+		1DCB360C25E1D28600A0A234 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB360B25E1D28600A0A234 /* SettingsViewController.swift */; };
+		1DCB361725E1DA9800A0A234 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCB361625E1DA9800A0A234 /* Car.swift */; };
 		5133F062661E5FDE745C38AF /* Pods_Pothole_Detection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387096ECF9F482537C6C447A /* Pods_Pothole_Detection.framework */; };
 		6E0947752564E3A900BCCA50 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0947742564E3A900BCCA50 /* MapViewController.swift */; };
 		B6A66AACA45C1F3998FB17CD /* Pods_Pothole_DetectionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE419BD35FB5FF86DF2E838F /* Pods_Pothole_DetectionTests.framework */; };
@@ -56,6 +58,8 @@
 		1D8586C625635D5100667F3C /* Pothole-DetectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pothole-DetectionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8586CA25635D5100667F3C /* Pothole_DetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pothole_DetectionUITests.swift; sourceTree = "<group>"; };
 		1D8586CC25635D5100667F3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DCB360B25E1D28600A0A234 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1DCB361625E1DA9800A0A234 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		387096ECF9F482537C6C447A /* Pods_Pothole_Detection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pothole_Detection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64811BC8E1544487F7C1FB0F /* Pods-Pothole-Detection-Pothole-DetectionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pothole-Detection-Pothole-DetectionUITests.release.xcconfig"; path = "Target Support Files/Pods-Pothole-Detection-Pothole-DetectionUITests/Pods-Pothole-Detection-Pothole-DetectionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6E0947742564E3A900BCCA50 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				1D8586B325635D5100667F3C /* LaunchScreen.storyboard */,
 				1D8586B625635D5100667F3C /* Info.plist */,
 				1D8586AE25635D4F00667F3C /* Pothole_Detection.xcdatamodeld */,
+				1DCB360B25E1D28600A0A234 /* SettingsViewController.swift */,
+				1DCB361625E1DA9800A0A234 /* Car.swift */,
 			);
 			path = "Pothole-Detection";
 			sourceTree = "<group>";
@@ -421,6 +427,8 @@
 				1D8586A825635D4F00667F3C /* SceneDelegate.swift in Sources */,
 				6E0947752564E3A900BCCA50 /* MapViewController.swift in Sources */,
 				1D8586B025635D4F00667F3C /* Pothole_Detection.xcdatamodeld in Sources */,
+				1DCB361725E1DA9800A0A234 /* Car.swift in Sources */,
+				1DCB360C25E1D28600A0A234 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,14 +607,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6AH3WKPJA;
+				DEVELOPMENT_TEAM = 33KK8D87CU;
 				INFOPLIST_FILE = "Pothole-Detection/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.PotholeDetection.Pothole-Detection-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PotholeDetection.Pothole-Detection-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -622,14 +630,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U6AH3WKPJA;
+				DEVELOPMENT_TEAM = 33KK8D87CU;
 				INFOPLIST_FILE = "Pothole-Detection/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.PotholeDetection.Pothole-Detection-1";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.PotholeDetection.Pothole-Detection-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         // Override point for customization after application launch.
+        let defaults = UserDefaults.standard
+        let defaultValue = ["MyKey" : "Sedan"]
+        defaults.register(defaults: defaultValue)
         return true
     }
 

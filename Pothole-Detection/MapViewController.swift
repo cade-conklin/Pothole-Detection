@@ -159,16 +159,28 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.distanceFilter = kCLDistanceFilterNone //Location will constantly update
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
-        
+        //populates map with all potholes that have previosly been recorded
         self.database.child("Potholes").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,
                    let pothole = snapshot.value as? NSDictionary {
                     let longitude = pothole["longitude"] as? Double
                     let latitude = pothole["latitude"] as? Double
-                    let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
-                    self.putPinOnMap(location: pinlocation, potholeNum: "test")
-                    print("pothole: ", pothole)
+                 //   let number = pothole["number"] as? String
+                    if(pothole["number"] != nil) {
+                       // print("Number: ", (pothole["number"]) as! Int)
+                        let number = String((pothole["number"]) as! Int)
+                        let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                        self.putPinOnMap(location: pinlocation, potholeNum: number)
+                        print("pothole: ", pothole)
+                    }
+                    else {
+                        let number = "no_num"
+                   // print("Number: ", (pothole["number"]) as! Int)
+                        let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                        self.putPinOnMap(location: pinlocation, potholeNum: number)
+                        print("pothole: ", pothole)
+                    }
                 }
             }
         })
@@ -241,15 +253,28 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 //            ]
 //            database.child("Potholes/Pothole_" + String(Int.random(in: 0..<10000))).setValue(object)
 
+            //populates map with all potholes that have previosly been recorded
             self.database.child("Potholes").observeSingleEvent(of: .value, with: { (snapshot) in
                 for child in snapshot.children {
                     if let snapshot = child as? DataSnapshot,
                        let pothole = snapshot.value as? NSDictionary {
                         let longitude = pothole["longitude"] as? Double
                         let latitude = pothole["latitude"] as? Double
-                        let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
-                        self.putPinOnMap(location: pinlocation, potholeNum: "test")
-                        print("pothole: ", pothole)
+                     //   let number = pothole["number"] as? String
+                        if(pothole["number"] != nil) {
+                           // print("Number: ", (pothole["number"]) as! Int)
+                            let number = String((pothole["number"]) as! Int)
+                            let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                            self.putPinOnMap(location: pinlocation, potholeNum: number)
+                            print("pothole: ", pothole)
+                        }
+                        else {
+                            let number = "no_num"
+                       // print("Number: ", (pothole["number"]) as! Int)
+                            let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                            self.putPinOnMap(location: pinlocation, potholeNum: number)
+                            print("pothole: ", pothole)
+                        }
                     }
                 }
             })
@@ -272,9 +297,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     
                     //Date and time at this instance:
                     let date = Date()
-                    let format = DateFormatter()
-                    format.dateFormat = "yyyy-MM-dd HH:mm:ss"
-                    let formattedDate = format.string(from: date)
+                    let formatD = DateFormatter()
+                    let formatT = DateFormatter()
+                    formatD.dateFormat = "MM/dd/yyyy"
+                    formatT.dateFormat = "HH:mm"
+                    let formattedDate = formatD.string(from: date)
+                    let formattedTime = formatT.string(from: date)
                     
                    //Get location at this instance
                     guard let coordinate = self.locationManager.location?.coordinate else {return}
@@ -282,9 +310,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     let pinLocation = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
                     //creating object that will be sent to DB if pothole is detected
                     let object: [String: Any] = [
+                        "number" : String(Int.random(in: 0..<10000)),
                         "latitude": Float(coordinate.latitude),
                         "longitude" : Float(coordinate.longitude),
-                        "Timestamp" : formattedDate
+                        "num_reports" : 1,
+                        "time" : formattedTime,
+                        "date" : formattedDate
                     ]
                     
                     if (self.counter > 10) {
@@ -295,7 +326,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     //                            "latitude": Float(coordinate.latitude),
     //                            "longitude" : Float(coordinate.longitude)
     //                        ]
-                            let potholeNum = String(Int.random(in: 0..<10000))
+                            let potholeNum = object["number"] as! String
                             self.database.child("Potholes/Pothole_" + potholeNum).setValue(object)
                             self.putPinOnMap(location: pinLocation, potholeNum: potholeNum)
                         }
@@ -308,7 +339,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     //                            "longitude" : Float(coordinate.longitude)
     //                            "
     //                        ]
-                            let potholeNum = String(Int.random(in: 0..<10000))
+                            let potholeNum = object["number"] as! String
                             self.database.child("Potholes/Pothole_" + potholeNum).setValue(object)
                             self.putPinOnMap(location: pinLocation, potholeNum: potholeNum)
                         }
@@ -328,10 +359,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     func putPinOnMap(location: CLLocationCoordinate2D, potholeNum: String){
         let pin = MKPointAnnotation()
-        pin.title = "Pothole_" + potholeNum
+        pin.title = String("Pothole_" + potholeNum)
         pin.coordinate = location
         mapView.addAnnotation(pin)
-        print("placed pin")
+        print("placed pin " + pin.title!)
     }
     
     @objc func timerAction() {

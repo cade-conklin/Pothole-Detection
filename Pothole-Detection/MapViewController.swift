@@ -368,4 +368,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @objc func timerAction() {
             counter += 1
         }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKPinAnnotationView)
+        {
+            print("Here")
+            if let annotationTitle = view.annotation?.title
+            {
+                print("User tapped on annotation with title: \(annotationTitle!)")
+            }
+        }
+    
+    
 }

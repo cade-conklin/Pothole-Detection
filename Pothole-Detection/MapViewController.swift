@@ -164,23 +164,27 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,
                    let pothole = snapshot.value as? NSDictionary {
-                    let longitude = pothole["longitude"] as? Double
-                    let latitude = pothole["latitude"] as? Double
-                 //   let number = pothole["number"] as? String
-                    if(pothole["number"] != nil) {
+                    let treated = pothole["treated"] as? String
+                    if (treated == "false") {
+                        let longitude = pothole["longitude"] as? Double
+                        let latitude = pothole["latitude"] as? Double
+                     //   let number = pothole["number"] as? String
+                        if(pothole["number"] != nil) {
+                           // print("Number: ", (pothole["number"]) as! Int)
+                            let number = String((pothole["number"]) as! Int)
+                            let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                            self.putPinOnMap(location: pinlocation, potholeNum: number)
+                            print("pothole: ", pothole)
+                        }
+                        else {
+                            let number = "no_num"
                        // print("Number: ", (pothole["number"]) as! Int)
-                        let number = String((pothole["number"]) as! Int)
-                        let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
-                        self.putPinOnMap(location: pinlocation, potholeNum: number)
-                        print("pothole: ", pothole)
+                            let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                            self.putPinOnMap(location: pinlocation, potholeNum: number)
+                            print("pothole: ", pothole)
+                        }
                     }
-                    else {
-                        let number = "no_num"
-                   // print("Number: ", (pothole["number"]) as! Int)
-                        let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
-                        self.putPinOnMap(location: pinlocation, potholeNum: number)
-                        print("pothole: ", pothole)
-                    }
+                    
                 }
             }
         })
@@ -258,22 +262,25 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 for child in snapshot.children {
                     if let snapshot = child as? DataSnapshot,
                        let pothole = snapshot.value as? NSDictionary {
-                        let longitude = pothole["longitude"] as? Double
-                        let latitude = pothole["latitude"] as? Double
-                     //   let number = pothole["number"] as? String
-                        if(pothole["number"] != nil) {
+                        let treated = pothole["treated"] as? String
+                        if (treated == "false") {
+                            let longitude = pothole["longitude"] as? Double
+                            let latitude = pothole["latitude"] as? Double
+                         //   let number = pothole["number"] as? String
+                            if(pothole["number"] != nil) {
+                               // print("Number: ", (pothole["number"]) as! Int)
+                                let number = String((pothole["number"]) as! Int)
+                                let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                                self.putPinOnMap(location: pinlocation, potholeNum: number)
+                                print("pothole: ", pothole)
+                            }
+                            else {
+                                let number = "no_num"
                            // print("Number: ", (pothole["number"]) as! Int)
-                            let number = String((pothole["number"]) as! Int)
-                            let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
-                            self.putPinOnMap(location: pinlocation, potholeNum: number)
-                            print("pothole: ", pothole)
-                        }
-                        else {
-                            let number = "no_num"
-                       // print("Number: ", (pothole["number"]) as! Int)
-                            let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
-                            self.putPinOnMap(location: pinlocation, potholeNum: number)
-                            print("pothole: ", pothole)
+                                let pinlocation = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+                                self.putPinOnMap(location: pinlocation, potholeNum: number)
+                                print("pothole: ", pothole)
+                            }
                         }
                     }
                 }
@@ -310,12 +317,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     let pinLocation = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
                     //creating object that will be sent to DB if pothole is detected
                     let object: [String: Any] = [
-                        "number" : String(Int.random(in: 0..<10000)),
+                        "number" : Int.random(in: 0..<10000),
                         "latitude": Float(coordinate.latitude),
                         "longitude" : Float(coordinate.longitude),
                         "num_reports" : 1,
                         "time" : formattedTime,
-                        "date" : formattedDate
+                        "date" : formattedDate,
+                        "treated" : "false"
                     ]
                     
                     if (self.counter > 10) {

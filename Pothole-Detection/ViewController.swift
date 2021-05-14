@@ -9,6 +9,7 @@ import UIKit
 import CoreMotion
 
 public var carType = ""
+public var loggedIn = false
 
 class ViewController: UIViewController {
 
@@ -17,12 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var SelectCarButton: UIButton!
     @IBOutlet weak var StartButton: UIButton!
     var car = Car(type: "Sedan")
+    var loggedInTrue = false
     var timer = Timer()
     var rotAngle: CGFloat = 0.0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set("loggedInFalse", forKey: "userKey")
         StartButton.layer.cornerRadius = 0.5 * StartButton.bounds.size.width
         StartButton.clipsToBounds = true
         StartButton.layer.borderWidth = 4
@@ -77,6 +80,13 @@ class ViewController: UIViewController {
             //SelectCarButton.setImage(image, for: .normal)
             SelectCarButton.setTitle("Car Type: Sedan", for: .normal)
            
+        }
+        let user_saved = UserDefaults.standard.object(forKey: "userKey")
+        let userFalse = user_saved as! String
+        print(userFalse)
+        if userFalse == "loggedInTrue" {
+            print("HEREHERHEHRERHERHEHREHHEHERERHEHREE")
+            StartButton.setTitle("GODOT", for: .normal)
         }
     }
     

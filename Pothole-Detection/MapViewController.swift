@@ -305,11 +305,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     //Date and time at this instance:
                     let date = Date()
                     let formatD = DateFormatter()
-                    let formatT = DateFormatter()
-                    formatD.dateFormat = "MM/dd/yyyy"
-                    formatT.dateFormat = "HH:mm"
+                    formatD.dateFormat = "yyyy-MM-ddM HH:mm:ss"
                     let formattedDate = formatD.string(from: date)
-                    let formattedTime = formatT.string(from: date)
                     
                    //Get location at this instance
                     guard let coordinate = self.locationManager.location?.coordinate else {return}
@@ -317,12 +314,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     let pinLocation = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
                     //creating object that will be sent to DB if pothole is detected
                     let object: [String: Any] = [
+                        "Timestamp" : formattedDate,
                         "number" : Int.random(in: 0..<10000),
                         "latitude": Float(coordinate.latitude),
                         "longitude" : Float(coordinate.longitude),
                         "num_reports" : 1,
-                        "time" : formattedTime,
-                        "date" : formattedDate,
                         "treated" : "false"
                     ]
                     

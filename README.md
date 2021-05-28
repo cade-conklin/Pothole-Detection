@@ -91,3 +91,7 @@ open .
 From there, the file system will open presenting you with a list of files at the root of the repository.  While the files are actually located in the *Insert where they are here* directory, you will need to open up the workspace version to edit in Xcode.  The proper file to open is title `Pothole-Detection.xcworkspace`
 
 Once that is open, you can make changes to the files.  To run, press the arrow in the top left corner.
+
+### HOW THE FILES WORK
+
+In order to see how the file system works, either open up the `Pothole-Detection.xcworkspace` and navigate the files from the dropdown in Xcode, or look through the repo.  To see the files you will work on, go into the [`Pothole-Detection` directory](https://github.com/cade-conklin/Pothole-Detection/tree/main/Pothole-Detection).  There are asset files which contain image sets for the different logos used in the app, base files which contain the storyboards, and the main files which control which is put on the storyboard.  The main.storyboard contains five different screens that are connected to five different `viewController.swift` files.  The best practice is to have one view controller for each screen.
